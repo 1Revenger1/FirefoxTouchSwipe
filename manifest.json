@@ -1,0 +1,19 @@
+{
+	"manifest_version": 2,
+	"name": "TouchpadSwipe",
+	"version": "1.0",
+
+	"permissions": [
+		"activeTab",
+		"history"
+	],
+
+	"description": "Allows you to use the trackpad to navigate forward and backwards",
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"css": ["style.css"],
+			"js": ["touchpadswipe.js"]
+		}
+	]
+}

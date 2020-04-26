@@ -1,0 +1,56 @@
+.sliderStroke {
+	stroke: rgb(0, 183, 255);
+}
+
+.arrowFill {
+	fill: rgb(255, 255, 255);
+}
+
+#slider {
+	position: fixed;
+	top: 45%;
+	display: inline-block;
+	z-index: 1000;
+}
+
+@keyframes shake {
+	10%, 90% {
+		transform: translate3d(-1px, 0, 0) rotate(0);
+	}
+
+	20%, 80% {
+		transform: translate3d(2px, 0, 0) rotate(0);
+	}
+
+	30%, 50%, 70% {
+		transform: translate3d(-4px, 0, 0) rotate(0);
+	}
+
+	40%, 60% {
+		transform: translate3d(4px, 0, 0) rotate(0);
+	}
+}
+
+.sliderLeft {
+	position: fixed;
+	top: 45%;
+	z-index: 1000;
+	transform: rotate(180deg);
+}
+
+.sliderLeft.anim {
+	animation: shake 0.82s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+.sliderRight {
+	position: fixed;
+	top: 45%;
+	z-index: 1000;
+	right: 0;
+	left: auto;
+	transform: translate(0, 1.1mm);
+}
+
+.sliderRight.anim {
+	animation: shake 0.82s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
